@@ -1,12 +1,13 @@
 function refresh() {
+    var i;
+    var err;
+	var result;
+    
 	if (!web3.isConnected()) {
 		console.error("Not connected");
 	}
 
-	var err;
-	var result;
-	
-	inst.N.call(function(err, result) {
+	inst.N.call(function (err, result) {
 		if (result != null)
 			N = result.c[0];
 		else
@@ -15,11 +16,11 @@ function refresh() {
 	
 	console.log(N);
 		
-	var addressOf = Array(N);
-	var balanceOf = Array(N);
-	var lastPing = Array(N);
+	var addressOf = new Array(N);
+	var balanceOf = new Array(N);
+	var lastPing = new Array(N);
 		
-	for (var i = 0; i < N; i++) {
+	for (i = 0; i < N; i++) {
         inst.AddressOf(i, function(err, result) {
 			if (result != null)
 				addressOf[i] = result;
@@ -28,7 +29,7 @@ function refresh() {
 
 	var text = "";
 	
-	for (var i = 0; i < N; i++) {
+	for (i = 0; i < N; i++) {
 		inst.LastPingOf(addressOf[i], function(err, result) {
 			if (result != null)
 				lastPing[i] = result;
