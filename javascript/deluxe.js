@@ -7,9 +7,8 @@ function refresh() {
 	var result;
 	
 	inst.N.call(function(err, result) {
-		console.log(result);
 		if (result != null)
-			N = result;
+			N = result.c[0];
 		else
 			console.error("N is Null");
 	});
