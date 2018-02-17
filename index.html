@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="">
+		<link rel="icon" href="https://getbootstrap.com/favicon.ico">
+		<title>The Ether Button | Countdown experiment</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="BootStrap/bootstrap.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="BootStrap/cover.css" rel="stylesheet">
+	</head>
+	<body class="text-center" onload="initialize()">
+		<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+			<header class="masthead mb-auto">
+				<div class="inner">
+					<h3 class="masthead-brand">The Ether Button</h3>
+					<nav class="nav nav-masthead justify-content-center">
+						<a class="nav-link" href="https://etherscan.io/address/0x3db9f293b2e992f8c339a543561a615559c375dd" target="_blank">Contract</a>
+					</nav>
+				</div>
+			</header>
+			<main role="main" class="inner cover">
+				<h1 id="timeLeft" class="cover-heading">Loading...</h1>
+				<p id="currentPlayer" class="lead">Loading...</p>
+				<p id="currentWinner" class="lead">Loading...</p>
+				<p id="currentPot" class="lead">Loading...</p>
+				<p id="NextWinnerPot" class="lead">Loading...</p>
+					<button onclick="PRESSTHEBUTTON()" class="btn btn-outline-light">Click</button>
+					<button onclick="withdraw()" class="btn btn-outline-light">Withdraw</button>
+				</p>
+			</main>
+			<footer class="mastfoot mt-auto">
+				<div class="inner">
+					<p>You have to click to become the learder and reset the timer.
+					If the timer gets to zero, you can withdraw 10% of the funds.
+					There is a 0.0005 fee per winner for the dev team.<p >
+					<p>This game is not a Ponzi. This game is fair. This game is simple. Have fun !</p>
+					<p>You need <a href="https://metamask.io/">MetaMask</a> to play this game.</p>
+				</div>
+			</footer>
+		</div>
+		<!-- Bootstrap core JavaScript
+			================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="BootStrap/jquery-3.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+		<script src="BootStrap/popper.js"></script>
+		<script src="BootStrap/bootstrap.js"></script>
+		
+		<script type="text/javascript" src="libraries/web3.min.js"></script>
+		<script type="text/javascript" src="javascript/main.js"></script>
+	</body>
+</html>
+
