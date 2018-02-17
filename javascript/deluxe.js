@@ -15,9 +15,9 @@ function refresh() {
 	
 	console.log(N);
 		
-	var addressOf = new Array(N);
-	var balanceOf = new Array(N);
-	var lastPing = new Array(N);
+	var addressOf = Array(N);
+	var balanceOf = Array(N);
+	var lastPing = Array(N);
 		
 	for (var i = 0; i < N; i++) {
         inst.AddressOf(i, function(err, result) {
