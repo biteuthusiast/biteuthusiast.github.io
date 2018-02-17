@@ -1,5 +1,3 @@
-var
-
 function refresh() {
     var i;
     var err;
@@ -35,11 +33,11 @@ function refresh() {
 		inst.LastPingOf(addressOf[i], function(err, result) {
 			if (result != null)
 				lastPing[i] = result;
-		})
+		});
         inst.BalanceOf(addressOf[i], function(err, result) {
 			if (result != null)
 				balanceOf[i] = web3.fromWei(result, "ether");
-		})
+		});
 		text += Create_Line(addressOf[i], LastPingOf[i], BalanceOf[i]) + " ";
     }
 	
@@ -112,7 +110,7 @@ function initialize() {
 		web3 = new Web3(web3.currentProvider);
 	} else {
 		console.log("Connecting to local node.");
-		web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
+		web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 	}
 
 	inst = web3.eth.contract([
