@@ -15,8 +15,7 @@ function refresh() {
 	var addressOf = new Array(N);
 	var balanceOf = new Array(N);
 	var lastPing = new Array(N);
-	
-	
+		
 	for (var i = 0; i < N; i++) {
         inst.AddressOf(i, function(err, result) {
 			if (result != null)
@@ -66,7 +65,7 @@ function Create_Line(add, l, b) {
 function PRESSTHEBUTTON() {
 	console.log("Clic");
 	var amount = web3.toWei(0.0001, "ether")
-	inst.click.sendTransaction({
+	inst.Ping.sendTransaction({
 		gas: 100000,
 		gasPrice: 1000000000,
 		value: amount
