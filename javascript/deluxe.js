@@ -11,17 +11,19 @@ function refresh() {
 			N = result.c[0];
 	});
 	
+	
+	var addressOf = new Array(N);
+	var balanceOf = new Array(N);
+	var lastPing = new Array(N);
+	
+	
 	for (var i = 0; i < N; i++) {
         inst.AddressOf(i, function(err, result) {
 			if (result != null)
 				a[i] = result;
 		})
     }
-	
-	var addressOf = new Array(N);
-	var balanceOf = new Array(N);
-	var lastPing = new Array(N);
-	
+
 	var text = "";
 	
 	for (var i = 0; i < N; i++) {
