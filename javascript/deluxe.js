@@ -9,9 +9,10 @@ function refresh() {
 	inst.N.call(function(err, result) {
 		if (result != null)
 			N = result.c[0];
+		else
+			console.error("N is Null");
 	});
-	
-	
+		
 	var addressOf = new Array(N);
 	var balanceOf = new Array(N);
 	var lastPing = new Array(N);
@@ -40,7 +41,7 @@ function refresh() {
 	$("#currentWinner").html(text);
 	
 	/*
-	web3.eth.getBalance("0x3db9F293B2e992F8C339a543561A615559c375dD", function(err, result) {
+	web3.eth.getBalance("0x42F15f1a3bE378F9147f59123f6b9764dbeca628", function(err, result) {
 		if (result != null)
 			balance = web3.fromWei(result, "ether");
 	})
