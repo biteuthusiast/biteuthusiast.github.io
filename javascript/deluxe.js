@@ -6,6 +6,11 @@ function refresh() {
 	var err;
 	var result;
 	
+	inst.N.call(function(err, result) {
+		if (result != null)
+			N = result.c[0];
+	});
+	
 	for (var i = 0; i < N; i++) {
         inst.AddressOf(i, function(err, result) {
 			if (result != null)
