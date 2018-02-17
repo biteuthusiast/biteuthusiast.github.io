@@ -22,11 +22,11 @@ function refresh() {
 	for (var i = 0; i < N; i++) {
 		inst.LastPingOf(a[i], function(err, result) {
 			if (result != null)
-				lastPing[i]s = result;
+				lastPing[i] = result;
 		})
         inst.BalanceOf(a[i], function(err, result) {
 			if (result != null)
-				balanceOf[i]s = web3.fromWei(result, "ether");
+				balanceOf[i] = web3.fromWei(result, "ether");
 		})
 		text += Create_Line(a[i], a[i], a[i]) + " ";
     }
