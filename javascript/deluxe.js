@@ -54,7 +54,7 @@ function Create_Line(add, l, b) {
 	text = add;
 	text += " ";
 	if (deadline - now > 0)
-		text += secondsToHours(deadline - now);
+		text += secondsToHours(12*60*60 - (now - l));
 	else
 		text += 0;
 	text += " ";
