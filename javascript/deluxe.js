@@ -23,22 +23,22 @@ function refresh() {
 	for (var i = 0; i < N; i++) {
         inst.AddressOf(i, function(err, result) {
 			if (result != null)
-				a[i] = result;
+				addressOf[i] = result;
 		})
     }
 
 	var text = "";
 	
 	for (var i = 0; i < N; i++) {
-		inst.LastPingOf(a[i], function(err, result) {
+		inst.LastPingOf(addressOf[i], function(err, result) {
 			if (result != null)
 				lastPing[i] = result;
 		})
-        inst.BalanceOf(a[i], function(err, result) {
+        inst.BalanceOf(addressOf[i], function(err, result) {
 			if (result != null)
 				balanceOf[i] = web3.fromWei(result, "ether");
 		})
-		text += Create_Line(a[i], a[i], a[i]) + " ";
+		text += Create_Line(addressOf[i], LastPingOf[i], BalanceOf[i]) + " ";
     }
 	
 	$("#currentWinner").html(text);
