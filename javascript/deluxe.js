@@ -76,7 +76,7 @@ function PRESSTHEBUTTON() {
 
 function withdraw() {
 	inst.withdraw.sendTransaction({
-		gas: 100000,
+		gas: 300000,
 		gasPrice: 1000100000
 	}, function(error, txid) {
 		console.log(txid);
