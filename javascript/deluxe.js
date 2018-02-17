@@ -1,3 +1,5 @@
+var
+
 function refresh() {
     var i;
     var err;
