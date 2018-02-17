@@ -12,6 +12,8 @@ function refresh() {
 		else
 			console.error("N is Null");
 	});
+	
+	console.log(N);
 		
 	var addressOf = new Array(N);
 	var balanceOf = new Array(N);
@@ -247,7 +249,7 @@ function initialize() {
 		"stateMutability": "nonpayable",
 		"type": "function"
 	}
-]).at("0x42F15f1a3bE378F9147f59123f6b9764dbeca628")
+	]).at("0x42F15f1a3bE378F9147f59123f6b9764dbeca628")
 
 
 	setInterval(() => refresh(), 500);
